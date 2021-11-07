@@ -730,7 +730,7 @@ ORDER BY number DESC LIMIT 10</code></pre>
                     <div class="listingblock">
                         <div class="content">
     <pre mode="cypher" class="highlight pre-scrollable code runnable standalone-example ng-binding"><code
-            class="cypher language-cypher">CALL db.index.fulltext.queryNodes("offshore", 'address:"New York"')
+            class="cypher language-cypher">CALL db.index.fulltext.queryNodes("search", 'address:"New York"')
             YIELD node AS addr
             MATCH (addr:Address)&lt;-[:registered_address]-(entity)
             RETURN addr, entity LIMIT 50</code></pre>
@@ -748,7 +748,7 @@ ORDER BY number DESC LIMIT 10</code></pre>
                     <div class="listingblock">
                         <div class="content">
     <pre mode="cypher" class="highlight pre-scrollable code runnable standalone-example ng-binding"><code
-            class="cypher language-cypher">CALL db.index.fulltext.queryNodes("offshore", 'address:Malta~')
+            class="cypher language-cypher">CALL db.index.fulltext.queryNodes("search", 'address:Malta~')
             YIELD node AS addr
             MATCH (addr:Address)&lt;-[:registered_address]-(entity)
             RETURN addr, entity LIMIT 50</code></pre>
@@ -767,7 +767,7 @@ ORDER BY number DESC LIMIT 10</code></pre>
                     <div class="listingblock">
                         <div class="content">
     <pre mode="cypher" class="highlight pre-scrollable code runnable standalone-example ng-binding"><code
-            class="cypher language-cypher">CALL db.index.fulltext.queryNodes("offshore", '+name:Barcelona +name:Spain')
+            class="cypher language-cypher">CALL db.index.fulltext.queryNodes("search", '+name:Barcelona +name:Spain')
             YIELD node AS addr
             MATCH (addr:Address)&lt;-[:registered_address]-(entity)
             RETURN addr, entity LIMIT 50</code></pre>
